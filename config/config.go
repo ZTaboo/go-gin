@@ -8,6 +8,7 @@ import (
 
 var (
 	Port string
+	Info Config
 )
 
 func init() {
@@ -20,5 +21,6 @@ func init() {
 	if err != nil {
 		log.Print(err)
 	}
+	Info = config
 	Port = ":" + config.Host.Port
 }
