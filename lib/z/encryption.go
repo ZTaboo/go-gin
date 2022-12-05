@@ -13,8 +13,10 @@ func BcryptEncryption(str string) string {
 	return string(hash)
 }
 
-// BcryptCheck 校验密码正确性
-// pass为密码，str为需要被验证正确性的字符串
+/*
+BcryptCheck 校验密码正确性
+pass为密码，str 为需要被验证正确性的字符串
+*/
 func BcryptCheck(pass, str string) error {
 	err := bcrypt.CompareHashAndPassword([]byte(pass), []byte(str))
 	if err != nil {

@@ -1,0 +1,19 @@
+info:
+  contact: {}
+paths:
+  /v1/Hello:
+    get:
+      consumes:
+      - application/json
+      description: 测试 Description
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 测试 Summary
+      tags:
+      - v1
+swagger: "2.0"
